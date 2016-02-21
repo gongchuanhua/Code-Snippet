@@ -1,0 +1,60 @@
+技术随笔
+sublime text 快捷收集
+1. 文件快速导航： 这是sublime上面很好用的功能之一，ctrl+p可以调出窗口，菜单上的解释是gotoanythings ，确实如其所言，调出窗口后，直接输入关键字，可以在已打开的项目文件夹中进行快速文件名导航，而且支持模糊搜索,对于不想一直鼠标点开文件夹的同学来说极为方便，并且在该窗口里加上:前缀即为行跳转(ctrl+G)，加上@(ctrl+R)前缀在html里是id 关键字导航，css里是每条规则导航，js里则是每个function导航。
+
+2. 命令行模式 ctrl+` 可以调出命令行模式(view->show console)，主要支持python语法等，没试用过只知 quit()可以退出 。。不过sublime的插件平台package controller可以用命令行安装.
+
+
+4. Ctrl+D 选词 （按住-继续选择下个相同的字符串）ctrl+F查找是一下选择本页面的全部相同的然后按键盘替换则全替换
+
+5. ctrl+shift+F 默认是在本项目(用得最多的)．也可能来文件夹里查找，与普通编辑不同的地方是sublime允许添加多个文件夹进行查找(add directory)
+
+6. ctrl+L 选择整行（按住-继续选择下行，即按住ctrl不放按一次L则多选一行）
+
+7. Ctrl+Shift+K 删除整行,Ctrl+KK 从光标处删除至行尾
+
+8. ctrl+/ 单行注释， ctrl+shift+/块注释( 注释已选择内容)，sublime会自动根据语言选择注释方式
+
+9. ctrl+Enter 光标后插入行Ctrl+Shift+Enter 光标前插入行
+
+10. ctrl+F2可以进行增刪标记，然后F2在标记之间切换，Shift+F2 上一个书签.这里不爽的是无法进行鼠标添加标记
+
+11. 在 菜单View-syntax下可以将当前面面以指定的语言进行语法高亮，通常情况下sublime会自动进行判断选择
+
+12. snippets 代码片段插件 ，在tools-snippets菜单下可以查看当前页面支持的snippets，可以在缩略词后加tab自动补全snippets， snippets也可以从安装插件进行扩展
+
+13. Build编译，可以进行ruby等代码的编译，我安装了一个yui compressor后，就可以在css js页面里进行压缩，快捷键是ctrl+B, 会自动在当前目录下生成xx.min.js, xx.min.css等压缩文件
+
+14. 在菜单Preferences 下面是各种配置文件，sublime与其他编辑器不同的是，他不提供可视化配置，软件的配置及快捷键配置全都是存在.xml文件里手动配 置，Settings-default 是系统默认配置，最好不要改，要改动的东西存放 在Settings-User里，比如font-　　　size等， Key-bindings是快捷键配置, color scheme是代码配色方案选择，sublime本身提供了很多很不错的配色方案
+
+15. 在页面右下角，有快速设置tab转为spaces的菜单，可以指定页面的tab宽度，也可以将页面所有tab转为指定的spaces格数
+
+16.其它快捷键
+		
+ctrl+[ 和 ctrl+]（已改成我习惯的快捷键）.
+ctrl+up, ctrl+down可以一行一行的滚动屏幕，
+pageUp pageDown一页一页翻动
+ctrl+shift+a 可以HTML标签内容，每按一次逐级往上，
+ctrl+shift+space可以选择js等语言里的块{内容},
+Ctrl+Shift+D 复制光标所在整行，插入在该行之前
+Ctrl+J 合并行（已选择需要合并的多行时）
+Ctrl+KU 改为大写
+Ctrl+KL 改为小写
+Ctrl+M 光标跳至对应的括号(BracketHighlighter插件做得更好)
+Ctrl+Shift+M 选择括号内的内容（按住-继续选择父括号）
+Alt+. 闭合当前标签
+Ctrl+Shift+A 选择光标位置父标签对儿
+Ctrl+Shift+[ 折叠代码
+Ctrl+Shift+] 展开代码
+Ctrl+KT 折叠属性
+Ctrl+K0 展开所有
+Ctrl+U 软撤销
+Ctrl+T 词互换
+Tab 缩进 自动完成
+Shift+Tab 去除缩进
+Ctrl+Shift+↑ 与上行互换
+Ctrl+Shift+↓ 与下行互换
+Ctrl+K Backspace 从光标处删除至行首
+
+17  添加智能代码块提示 Tools->new snippet  (mac机下保存后缀要为.sublime-snippet )
+     content：放代码必须放在CDATA里，$1代表光标位置，方便编辑类名 tabTrigger：快捷键  scope: 响应范围 可以是 html css js文件等 description：代码描述 在输入快捷键的时候 提示框内的介绍描述文字
